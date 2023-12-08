@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 
 const Carousel: React.FC = () => {
-  const settings: Slider.Settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -18,7 +18,7 @@ const Carousel: React.FC = () => {
   ];
 
   return (
-    <Slider {...settings} style={{ height: '400px' }}>
+    <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
           <img
