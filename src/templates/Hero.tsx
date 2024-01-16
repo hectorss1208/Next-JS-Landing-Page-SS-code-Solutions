@@ -1,53 +1,45 @@
-import Link from 'next/link';
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
-import { Background } from '../background/Background';
-import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
-import Carousel from './Carousel';
-import { Logo } from './Logo';
+import { Background } from "../background/Background";
+import { Section } from "../layout/Section";
+import { NavbarTwoColumns } from "../navigation/NavbarTwoColumns";
+import Carousel from "./Carousel";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { Logo } from "./Logo";
 
-const Hero = () => (
-  <Background color="bg-gray-100">
-    <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href={''}>Home</Link>
-        </li>
-        <li>
-          <Link href={''}>Services</Link>
-        </li>
-        <li>
-          <Link href={''}>About Us</Link>
-        </li>
-        <li>
-          <Link href={''}>Resources</Link>
-        </li>
-        <li>
-          <Link href={''}>Contact us</Link>
-        </li>
-      </NavbarTwoColumns>
-    </Section>
-    {/* 
-    <Section yPadding="pt-20 pb-32">
-      <HeroOneButton
-        title={
-          <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
-          </>
-        }
-        description="The easiest way to build a React landing page in seconds."
-        button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
-          </Link>
-        }
-      />
-    </Section> */}
-    <Section yPadding="pt-2 pb-6">
-      <Carousel />
-    </Section>
-  </Background>
-);
+const Hero = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Background color="bg-gray-100">
+      <Section yPadding="py-6">
+        <NavbarTwoColumns logo={<Logo xl />}>
+          <li>
+            <Link href={""}>{t("app.menu.home")}</Link>
+          </li>
+          <li>
+            <Link href={""}>{t("app.menu.services")}</Link>
+          </li>
+          <li>
+            <Link href={""}>{t("app.menu.about")}</Link>
+          </li>
+          <li>
+            <Link href={""}>{t("app.menu.resources")}</Link>
+          </li>
+          <li>
+            <Link href={""}>{t("app.menu.contactUs")}</Link>
+          </li>
+          <li>
+            <LanguageSwitcher />
+          </li>
+        </NavbarTwoColumns>
+      </Section>
+      <Section yPadding="pt-2 pb-6">
+        <Carousel />
+      </Section>
+    </Background>
+  );
+};
 
 export { Hero };
