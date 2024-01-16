@@ -1,6 +1,6 @@
 // components/LanguageSwitcher.jsx
-import { useTranslation } from "next-i18next";
-import { useEffect, useState } from "react";
+import { useTranslation } from 'next-i18next';
+import { useEffect, useState } from 'react';
 
 const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation();
@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div>
-      <label htmlFor="language-select">{t("app.menu.language")}</label>
+      <label htmlFor="language-select">{t('app.menu.language')}</label>
       <select
         id="language-select"
         value={i18n.language}
@@ -27,7 +27,7 @@ const LanguageSwitcher = () => {
             <img
               src="https://restcountries.com/v2/alpha/us"
               alt="US Flag"
-              style={{ width: "20px", marginRight: "5px" }}
+              style={{ width: '20px', marginRight: '5px' }}
             />
           )}
           English
@@ -37,7 +37,7 @@ const LanguageSwitcher = () => {
             <img
               src="https://restcountries.com/v2/alpha/es"
               alt="ES Flag"
-              style={{ width: "20px", marginRight: "5px" }}
+              style={{ width: '20px', marginRight: '5px' }}
             />
           )}
           Español

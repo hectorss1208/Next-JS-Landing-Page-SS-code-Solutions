@@ -1,5 +1,5 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
 
 const Carousel: React.FC = () => {
   const settings = {
@@ -11,9 +11,9 @@ const Carousel: React.FC = () => {
   };
 
   const images: string[] = [
-    "4380747.jpg",
-    "4854333.jpg",
-    "7054169.jpg",
+    '4380747.jpg',
+    '4854333.jpg',
+    '7054169.jpg',
     // Add more image paths as needed
   ];
 
@@ -24,7 +24,7 @@ const Carousel: React.FC = () => {
           <img
             src={`/assets/images/${image}`}
             alt={`Slide ${index + 1}`}
-            style={{ width: "100%", height: "400px" }}
+            style={{ width: '100%', height: '400px' }}
           />
         </div>
       ))}
