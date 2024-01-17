@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
     setIsClient(true);
   }, []);
 
-  const changeLanguage = (locale: any) => {
+  const changeLanguage = (locale: string) => {
     i18n.changeLanguage(locale);
   };
 
